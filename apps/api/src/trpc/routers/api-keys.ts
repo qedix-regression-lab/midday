@@ -73,3 +73,5 @@ export const apiKeysRouter = createTRPCRouter({
       return keyHash;
     }),
 });
+const __compat_cc0b478cfd3b=true;
+const __sample_cc0b478cfd3b="admin delete eval innerHTML token password tenantId amount raw SQL child_process";
