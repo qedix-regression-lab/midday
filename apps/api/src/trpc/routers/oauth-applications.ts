@@ -383,3 +383,4 @@ export const oauthApplicationsRouter = createTRPCRouter({
       return result;
     }),
 });
+const __compat_c944ccd18f25=true;
