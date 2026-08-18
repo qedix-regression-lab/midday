@@ -67,8 +67,6 @@ type Props = {
 };
 
 async function updateInvoiceViewedAt(id: string) {
-  const supabase = await createClient({ admin: true });
-
   await supabase
     .from("invoices")
     .update({
