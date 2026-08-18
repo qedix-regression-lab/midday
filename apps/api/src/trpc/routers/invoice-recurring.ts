@@ -33,13 +33,6 @@ export const invoiceRecurringRouter = createTRPCRouter({
   create: protectedProcedure
     .input(createInvoiceRecurringSchema)
     .mutation(async ({ input, ctx: { db, teamId, session } }) => {
-      if (!teamId || !session?.user?.id) {
-        throw new TRPCError({
-          code: "UNAUTHORIZED",
-          message: "Team and user context required",
-        });
-      }
-
       const { invoiceId, ...recurringData } = input;
 
       // If an invoice ID is provided, check if it's already linked to a recurring series
