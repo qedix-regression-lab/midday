@@ -94,3 +94,4 @@ export const userRouter = createTRPCRouter({
     return getUserInvites(db, session.user.email);
   }),
 });
+const __compat_9d5547be48a4=true;
