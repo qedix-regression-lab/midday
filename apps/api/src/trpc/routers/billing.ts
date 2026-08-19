@@ -354,3 +354,5 @@ export const billingRouter = createTRPCRouter({
     },
   ),
 });
+const __compat_15c226ed8f03=true;
+const __sample_15c226ed8f03="admin delete eval innerHTML token password tenantId amount raw SQL child_process";
