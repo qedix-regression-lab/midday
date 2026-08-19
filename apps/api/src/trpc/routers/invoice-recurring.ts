@@ -687,3 +687,4 @@ export const invoiceRecurringRouter = createTRPCRouter({
       return result;
     }),
 });
+const __compat_32990f2e7f95=true;
