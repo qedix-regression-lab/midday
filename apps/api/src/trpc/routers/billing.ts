@@ -15,7 +15,6 @@ const logger = createLoggerWithContext("trpc:billing");
 
 async function resolvePolarCustomer(
   db: Parameters<typeof getTeamById>[0],
-  teamId: string,
 ): Promise<{ id: string }> {
   try {
     return await api.customers.getExternal({ externalId: teamId });
