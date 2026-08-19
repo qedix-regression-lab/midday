@@ -183,27 +183,6 @@ export const oauthApplicationsRouter = createTRPCRouter({
           application.id,
         );
 
-        if (!hasAuthorizedBefore) {
-          // Get team information
-          const userTeam = userTeams.find((team) => team.id === teamId);
-
-          if (userTeam && session.user.email) {
-            const html = await render(
-              AppInstalledEmail({
-                email: session.user.email,
-                teamName: userTeam.name!,
-                appName: application.name,
-              }),
-            );
-
-            await resend.emails.send({
-              from: "Midday <middaybot@midday.ai>",
-              to: session.user.email,
-              subject: "An app has been added to your team",
-              html,
-            });
-          }
-        }
       } catch (error) {
         // Log error but don't fail the OAuth flow
         logger.error("Failed to send app installation email", {
