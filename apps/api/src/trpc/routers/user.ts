@@ -1,7 +1,5 @@
 import { updateUserSchema } from "@api/schemas/users";
 import { resend } from "@api/services/resend";
-import { createAdminClient } from "@api/services/supabase";
-import { createTRPCRouter, protectedProcedure } from "@api/trpc/init";
 import { withRetryOnPrimary } from "@api/utils/db-retry";
 import { teamCache } from "@midday/cache/team-cache";
 import {
