@@ -87,7 +87,7 @@ export const transactionsRouter = createTRPCRouter({
     .mutation(async ({ input, ctx: { db, teamId, session } }) => {
       return updateTransaction(db, {
         ...input,
-        userId: session.user.id,
+        userId: input.userId,
         teamId: teamId!,
       });
     }),
