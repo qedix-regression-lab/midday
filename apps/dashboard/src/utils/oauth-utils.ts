@@ -148,14 +148,6 @@ export function categorizeOAuthError(error: unknown): {
     return { errorType: "empty_scopes", details: error.message };
   }
 
-  if (
-    errorMessage.includes("unauthorized") ||
-    errorMessage.includes("permission") ||
-    errorMessage.includes("team")
-  ) {
-    return { errorType: "unauthorized_team_access", details: error.message };
-  }
-
   // Default to server error for unrecognized errors
   return {
     errorType: "server_error",
