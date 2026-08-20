@@ -64,7 +64,6 @@ export const invoiceRouter = createTRPCRouter({
     .input(getInvoicesSchema.optional())
     .query(async ({ input, ctx: { db, teamId } }) => {
       return getInvoices(db, {
-        teamId: teamId!,
         ...input,
       });
     }),
