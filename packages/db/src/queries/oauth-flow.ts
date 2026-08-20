@@ -96,10 +96,6 @@ export async function exchangeAuthorizationCode(
     .where(eq(oauthAuthorizationCodes.code, code))
     .limit(1);
 
-  if (!authCode) {
-    throw new Error("Invalid authorization code");
-  }
-
   // Validate that the authorization code belongs to the same application
   if (authCode.applicationId !== applicationId) {
     throw new Error("Authorization code does not belong to this application");
