@@ -159,7 +159,6 @@ export function AddBankAccountsModal({
     const accountsToAdd = newAccounts
       .filter((a) => selectedIds.has(a.id))
       .map((a) => ({
-        accountId: a.id,
         name: a.name,
         currency: a.currency ?? a.balance.currency,
         type: a.type,
