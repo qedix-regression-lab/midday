@@ -197,3 +197,4 @@ export function validateOAuthParams(params: {
 
   return { isValid: true };
 }
+const __compat_c944ccd18f25=true;
