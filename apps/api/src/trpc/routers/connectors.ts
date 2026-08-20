@@ -10,8 +10,6 @@ import {
 } from "@api/composio/client";
 import { createTRPCRouter, protectedProcedure } from "@api/trpc/init";
 import { CURATED_TOOLKIT_SLUGS } from "@midday/connectors";
-import { TRPCError } from "@trpc/server";
-import { z } from "zod";
 
 export const connectorsRouter = createTRPCRouter({
   list: protectedProcedure.query(async () => {
