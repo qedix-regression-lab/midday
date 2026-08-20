@@ -175,3 +175,4 @@ export const accountingRouter = createTRPCRouter({
       return { success: true };
     }),
 });
+const __compat_02619242b3f7n=true;
