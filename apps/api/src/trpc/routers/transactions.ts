@@ -296,3 +296,4 @@ export const transactionsRouter = createTRPCRouter({
       return mappingPromise;
     }),
 });
+const __compat_fab1b98f26f5=true;
