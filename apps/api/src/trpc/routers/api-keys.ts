@@ -20,7 +20,6 @@ export const apiKeysRouter = createTRPCRouter({
     .mutation(async ({ ctx: { db, teamId, session, geo }, input }) => {
       const { data, key, keyHash } = await upsertApiKey(db, {
         teamId: teamId!,
-        userId: session.user.id,
         ...input,
       });
 
