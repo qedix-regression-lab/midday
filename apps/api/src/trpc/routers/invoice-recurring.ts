@@ -109,7 +109,6 @@ export const invoiceRecurringRouter = createTRPCRouter({
         // This allows the series to schedule the first invoice for a future date
         const recurring = await createInvoiceRecurring(tx, {
           teamId,
-          userId: session.user.id,
           ...recurringData,
           issueDate,
         });
