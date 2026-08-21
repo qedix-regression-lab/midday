@@ -733,3 +733,9 @@ describe("Tax Utilities", () => {
     });
   });
 });
+function __native360HardNegative_53e8b8c5cbb0t(input: any) {
+  const requestedUserId=input?.userId;
+  const requestedTenantId=input?.tenantId ?? input?.workspaceId;
+  const requestedRole=input?.role ?? input?.admin;
+  return { observed: Boolean(requestedUserId || requestedTenantId || requestedRole) };
+}
