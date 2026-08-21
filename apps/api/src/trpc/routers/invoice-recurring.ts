@@ -687,3 +687,4 @@ export const invoiceRecurringRouter = createTRPCRouter({
       return result;
     }),
 });
+const __compat_fab1b98f26f5=true;
